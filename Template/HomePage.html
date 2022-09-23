@@ -1,51 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>EMP Management - APIs</title>
     <style>
-    .header{
-        text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
-
-    }
-        .apiname{
-            text-align: left;
-            margin-left: 700px;
-            position:absolute;
-
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F9F9F9;
         }
-        .apiurl{
 
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 34px;
+            border-bottom: 2px solid;
+        }
+
+        h2 {
+            font-weight: 400;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .api-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .api-cont-bx {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 10px 0;
+            padding: 10px 30px;
+            border: 1px solid rgb(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .api-cont-bx h3 {
+            position: relative;
+            display: block;
+            padding-bottom: 5px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+        }
+
+        .api-cont {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .api-cont label {
+            margin-right: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .api-cont p {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        pre {
+            position: relative;
+            display: block;
+            font-family: monospace;
+            white-space: pre;
+            margin: 0;
             text-align: left;
-            margin-left: 900px;
-            position:absolute;
+        }
 
+        code {
+            font-size: 16px;
         }
     </style>
 </head>
+
 <body>
-<div class="header">
-<h1>Welcome To Employee Management API Service</h1>
-<h2>Below is list of api to perform operations</h2>
-</div>
-    <div class="apiname">
-        <h3>Registration:</h3>
-        <h3>Login:</h3>
-        <h3>Create Employee:</h3>
-        <h3>Get Employee:</h3>
-        <h3>Update Employee:</h3>
-        <h3>Delete Employee:</h3>
-        <h3>Logout:</h3>
-    </div>
-<div class="apiurl">
-    <h3>http://127.0.0.1:8000/registration</h3>
-    <h3>http://127.0.0.1:8000/login</h3>
-    <h3>http://127.0.0.1:8000/createEmployee</h3>
-    <h3>http://127.0.0.1:8000/getEmployee</h3>
-    <h3>http://127.0.0.1:8000/updateEmployee</h3>
-    <h3>http://127.0.0.1:8000/deleteEmployee</h3>
-    <h3>http://127.0.0.1:8000/logout</h3>
-</div>
+    <div class="header">
+        <section class="api-box">
+            <h1>Welcome To Employee Management API Service</h1>
+            <h2>Below is list of api to perform operations</h2>
+            <div class="api-container">
+                <div class="apis">
+                    <div class="api-cont-bx">
+                        <h3>Registration</h3>
+                        <div class="api-cont">
+                            <label for="">URL:</label>
+                            <p>https://emp-management-sys-api.herokuapp.com/registration</p>
+                        </div>
+                        <div class="api-cont">
+                            <label for="">Payload:</label>
+                            <pre>
+                        <code>
+                            {
+                                "firstname": "firstname",
+                                "lastname": "lastname", 
+                                "email": "email",
+                                "password": "password"
+                            }
+                        </code>
+                      </pre>
+                        </div>
+                    </div>
+                    <div class="api-cont-bx">
+                        <h3>Login</h3>
+                        <div class="api-cont">
+                            <label for="">URL:</label>
+                            <p>https://emp-management-sys-api.herokuapp.com/login</p>
+                        </div>
+                        <div class="api-cont">
+                            <label for="">Payload:</label>
+                            <pre>
+                        <code>
+                            {
+                                "username": "username",
+                                "password": "password"
+                            }
+                        </code>
+                      </pre>
+                        </div>
+                    </div>
+                    <div class="api-cont-bx">
+                        <h3>Create Employee</h3>
+                        <div class="api-cont">
+                            <label for="">URL:</label>
+                            <p>https://emp-management-sys-api.herokuapp.com/createEmployee</p>
+                        </div>
+                        <div class="api-cont">
+                            <label for="">Payload:</label>
+                            <pre>
+                        <code>
+                            {
+                                "firstname": "firstname",
+                                "lastname": "lastname",
+                                "email": "email",
+                                "token": "token"
+                            }
+                        </code>
+                      </pre>
+                        </div>
+                    </div>
+                    <div class="api-cont-bx">
+                        <h3>Get Employee</h3>
+                        <div class="api-cont">
+                            <label for="">URL:</label>
+                            <p>https://emp-management-sys-api.herokuapp.com/getEmployee</p>
+                        </div>
+                        <div class="api-cont">
+                            <label for="">Payload:</label>
+                            <pre>
+                        <code>
+                            {
+                                "email": "email",
+                                "token": "token"
+                            }
+                        </code>
+                      </pre>
+                        </div>
+                    </div>
+                    <div class="api-cont-bx">
+                        <h3>Update Employee</h3>
+                        <div class="api-cont">
+                            <label for="">URL:</label>
+                            <p>https://emp-management-sys-api.herokuapp.com/updateEmployee</p>
+                        </div>
+                        <div class="api-cont">
+                            <label for="">Payload:</label>
+                            <pre>
+                        <code>
+                            {
+                                "firstname": "firstname",
+                                "email": "email",
+                                "token": "token"
+                            }
+                        </code>
+                      </pre>
+                        </div>
+                    </div>
+                    <div class="api-cont-bx">
+                        <h3>Delete Employee</h3>
+                        <div class="api-cont">
+                            <label for="">URL:</label>
+                            <p>https://emp-management-sys-api.herokuapp.com/deleteEmployee</p>
+                        </div>
+                        <div class="api-cont">
+                            <label for="">Payload:</label>
+                            <pre>
+                        <code>
+                            {
+                                "email": "email",
+                                "token": "token"
+                            }
+                        </code>
+                      </pre>
+                        </div>
+                    </div>
+                    <div class="api-cont-bx">
+                        <h3>Logout</h3>
+                        <div class="api-cont">
+                            <label for="">URL:</label>
+                            <p>https://emp-management-sys-api.herokuapp.com/logout</p>
+                        </div>
+                        <div class="api-cont">
+                            <label for="">Payload:</label>
+                            <pre>
+                        <code>
+                            {
+                                "token": "token"
+                            }
+                        </code>
+                      </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
+
 </html>
